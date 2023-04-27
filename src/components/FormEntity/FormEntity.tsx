@@ -33,7 +33,7 @@ const FormEntity1: any = styled('div')({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `column`,
-  width: `700px`,
+  width: '100%',
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
   padding: `0px`,
@@ -42,7 +42,7 @@ const FormEntity1: any = styled('div')({
 });
 
 const Typography1: any = styled(Typography)(({ theme }: any) => ({
-  zIndex: `6`,
+  zIndex: `7`,
   margin: `0px`,
   color: theme.palette['text']['primary'],
   fontStyle: theme.typography['typography']['h6'].fontStyle,
@@ -57,7 +57,7 @@ const Typography1: any = styled(Typography)(({ theme }: any) => ({
 
 const Select1: any = styled(FormControl)(({ theme }: any) => ({
   alignSelf: `stretch`,
-  zIndex: `5`,
+  zIndex: `6`,
   margin: `16px 0px 0px 0px`,
   color: theme.palette['text']['secondary'],
   fontStyle: theme.typography['components']['input-label'].fontStyle,
@@ -71,6 +71,21 @@ const Select1: any = styled(FormControl)(({ theme }: any) => ({
 }));
 
 const TextField1: any = styled(TextField)(({ theme }: any) => ({
+  alignSelf: `stretch`,
+  zIndex: `5`,
+  margin: `16px 0px 0px 0px`,
+  color: theme.palette['text']['secondary'],
+  fontStyle: theme.typography['components']['input-label'].fontStyle,
+  fontFamily: theme.typography['components']['input-label'].fontFamily,
+  fontWeight: theme.typography['components']['input-label'].fontWeight,
+  fontSize: theme.typography['components']['input-label'].fontSize,
+  letterSpacing: theme.typography['components']['input-label'].letterSpacing,
+  lineHeight: theme.typography['components']['input-label'].lineHeight,
+  textDecoration: theme.typography['components']['input-label'].textDecoration,
+  textTransform: theme.typography['components']['input-label'].textTransform,
+}));
+
+const TextField2: any = styled(TextField)(({ theme }: any) => ({
   alignSelf: `stretch`,
   zIndex: `4`,
   margin: `16px 0px 0px 0px`,
@@ -139,7 +154,7 @@ const Frame260: any = styled('div')({
   margin: `0px 0px 0px 16px`,
 });
 
-const TextField2: any = styled(TextField)(({ theme }: any) => ({
+const TextField3: any = styled(TextField)(({ theme }: any) => ({
   alignSelf: `stretch`,
   margin: `0px`,
   color: theme.palette['text']['secondary'],
@@ -226,7 +241,7 @@ const FormControlLabel1: any = styled(FormControlLabel)(({ theme }: any) => ({
   textTransform: theme.typography['typography']['body1'].textTransform,
 }));
 
-const TextField3: any = styled(TextField)(({ theme }: any) => ({
+const TextField4: any = styled(TextField)(({ theme }: any) => ({
   flex: `1`,
   zIndex: `0`,
   margin: `0px 0px 0px 16px`,
@@ -245,7 +260,7 @@ const Button1: any = styled(Button)(({ theme }: any) => ({
   alignSelf: `stretch`,
   zIndex: `0`,
   margin: `16px 0px 0px 0px`,
-  color: theme.palette['colors']['grey']['500'],
+  color: theme.palette['primary']['contrast'],
   fontStyle: theme.typography['components']['button-large'].fontStyle,
   fontFamily: theme.typography['components']['button-large'].fontFamily,
   fontWeight: theme.typography['components']['button-large'].fontWeight,
@@ -262,7 +277,7 @@ function FormEntity(props: FormEntityProps): JSX.Element {
   return (
     <FormEntity1 className={props.className}>
       <Typography1 variant={'body1'} gutterBottom={false}>
-        {fns.getEntity()}
+        {fns.getEntityTitle()}
       </Typography1>
       <Select1 variant={'outlined'} size={'small'} disabled={false}>
         <InputLabel>{'Entity type'}</InputLabel>
@@ -275,6 +290,13 @@ function FormEntity(props: FormEntityProps): JSX.Element {
         </Select>
       </Select1>
       <TextField1
+        variant={'outlined'}
+        disabled={false}
+        size={'small'}
+        label={'Account name'}
+        InputProps={{}}
+      />
+      <TextField2
         variant={'outlined'}
         disabled={false}
         size={'small'}
@@ -295,7 +317,7 @@ function FormEntity(props: FormEntityProps): JSX.Element {
           </Select2>
         </Frame259>
         <Frame260>
-          <TextField2
+          <TextField3
             variant={'outlined'}
             disabled={false}
             size={'small'}
@@ -339,7 +361,7 @@ function FormEntity(props: FormEntityProps): JSX.Element {
           }
           label={'Control person exempt'}
         />
-        <TextField3
+        <TextField4
           variant={'outlined'}
           disabled={false}
           size={'small'}
