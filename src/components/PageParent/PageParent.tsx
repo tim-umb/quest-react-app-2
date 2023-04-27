@@ -24,7 +24,7 @@ const PageParent1: any = styled('div')(({ theme }: any) => ({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `column`,
-  height: `782px`,
+  height: '100vh',
   width: '100%',
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
@@ -80,7 +80,7 @@ const AppBody: any = styled('div')({
   margin: `0px`,
 });
 
-const MainContent: any = styled('div')({
+const RightColumn: any = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   display: `flex`,
   position: `relative`,
@@ -93,6 +93,7 @@ const MainContent: any = styled('div')({
   alignSelf: `stretch`,
   flex: `1`,
   margin: `0px`,
+  width: '75%',
 });
 
 const FormEntity1: any = styled(FormEntity)(({ theme }: any) => ({
@@ -108,9 +109,9 @@ function PageParent(props: PageParentProps): JSX.Element {
           <Header2 />
         </Header1>
         <AppBody>
-          <MainContent>
+          <RightColumn>
             <FormEntity1 />
-          </MainContent>
+          </RightColumn>
         </AppBody>
       </PageContainer>
     </PageParent1>
