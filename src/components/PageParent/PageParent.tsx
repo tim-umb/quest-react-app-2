@@ -24,7 +24,7 @@ const PageParent1: any = styled('div')(({ theme }: any) => ({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `column`,
-  height: '100vh',
+  height: `782px`,
   width: '100%',
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
@@ -89,8 +89,8 @@ const LeftColumn: any = styled('div')(({ theme }: any) => ({
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
   alignSelf: `stretch`,
-  width: '25%',
-  margin: `0px`,
+  width: `421px`,
+  margin: `0px 0px 0px 8px`,
 }));
 
 const RightColumn: any = styled('div')({
@@ -105,8 +105,7 @@ const RightColumn: any = styled('div')({
   boxSizing: `border-box`,
   alignSelf: `stretch`,
   flex: `1`,
-  margin: `0px 0px 0px 8px`,
-  width: '75%',
+  margin: `0px`,
 });
 
 const FormEntity1: any = styled(FormEntity)(({ theme }: any) => ({
@@ -122,8 +121,7 @@ function PageParent(props: PageParentProps): JSX.Element {
           <Header2 />
         </Header1>
         <AppBody>
-          <LeftColumn>
-          </LeftColumn>
+          {false && <LeftColumn></LeftColumn>}
           <RightColumn>
             <FormEntity1 />
           </RightColumn>
