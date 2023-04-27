@@ -44,8 +44,10 @@ const SubTabPanelContainer = styled('div')({
     height: '100%',
 });
 
-const MainContent: any = styled(Box)(({ theme }: any) => ({
-    height: '100%',
+const MainContent: any = styled('div')(({ theme }: any) => ({
+    display: 'flex ',   
+    justifyContent: 'center',
+    alignItems: 'center',  
 }));
 
 const tabsData = 
@@ -69,14 +71,22 @@ export function SubTabPanel(props: SubTabPanelProps) {
             {...other}
         >
             {value === index && (
-                <Box>
-                    <MainContent>
-                        <Typography sx={{ p: 3 }}>{children}</Typography>
-                    </MainContent>
-                </Box>
-            )
-            }
-        </SubTabPanelContainer >
+                <Grid
+                    container
+                    spacing={0}
+                    sx={{
+                        position: 'relative',
+                        height: '100%',
+                    }}
+                >
+                    <Grid item xs={12}>
+                        <MainContent>
+                            <Typography sx={{ p: 3 }}>{children}</Typography>
+                        </MainContent>
+                    </Grid>
+                </Grid>
+            )}
+        </SubTabPanelContainer>
     );
 }
 
