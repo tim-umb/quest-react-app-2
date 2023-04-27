@@ -51,12 +51,20 @@ const useFormEntity = () => {
       { value: 'entityType3', text: 'Entity Type 3' }
     ],
     taxIdType: [
-      { value: 'taxIdType1', text: 'Tad ID Type 1' },
+      { value: 'taxIdType1', text: 'Tax ID Type 1' },
       { value: 'taxIdType2', text: 'Tax ID Type 2' },
       { value: 'taxIdType3', text: 'Tax ID Type 3' }
     ],
-    foreignInvestorType: [],
-    accreditationTypes: []
+    foreignInvestorType: [
+      { value: 'foreignInvextorType1', text: 'Foreign Investor Type 1' },
+      { value: 'foreignInvextorType2', text: 'Foreign Investor Type 2' },
+      { value: 'foreignInvextorType3', text: 'Foreign Investor Type 3' }
+    ],
+    accreditationTypes: [
+      { value: 'accreditationType1', text: 'Accredition Type 1' },
+      { value: 'accreditationType2', text: 'Accredition Type 2' },
+      { value: 'accreditationType3', text: 'Accredition Type 3' }
+    ]
   };
 
   const getEntity = (): any => {
