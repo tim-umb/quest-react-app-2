@@ -71,7 +71,7 @@ const AppBody: any = styled('div')({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `row`,
-  justifyContent: `flex-start`,
+  justifyContent: `center`,
   alignItems: `flex-start`,
   padding: `0px`,
   boxSizing: `border-box`,
@@ -122,11 +122,7 @@ function PageParent(props: PageParentProps): JSX.Element {
           <Header2 />
         </Header1>
         <AppBody>
-          <LeftColumn>
-          </LeftColumn>
-          <RightColumn>
             <FormEntity1 />
-          </RightColumn>
         </AppBody>
       </PageContainer>
     </PageParent1>

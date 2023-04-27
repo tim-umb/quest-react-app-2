@@ -12,7 +12,7 @@ function App() {
       <ThemeProvider theme={questTheme}>
         <Routes>
           <Route path="/" element={
-            <MyLayout />        
+            <PageParent />        
           } />
         </Routes>
       </ThemeProvider>
