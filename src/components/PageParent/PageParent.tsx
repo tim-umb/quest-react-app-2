@@ -80,20 +80,7 @@ const AppBody: any = styled('div')({
   margin: `0px`,
 });
 
-const LeftColumn: any = styled('div')(({ theme }: any) => ({
-  color: theme.palette['primary']['contrast'],
-  display: `flex`,
-  position: `relative`,
-  isolation: `isolate`,
-  flexDirection: `column`,
-  justifyContent: `flex-start`,
-  alignItems: `flex-start`,
-  alignSelf: `stretch`,
-  width: `421px`,
-  margin: `0px 0px 0px 8px`,
-}));
-
-const RightColumn: any = styled('div')({
+const MainContent: any = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   display: `flex`,
   position: `relative`,
@@ -121,10 +108,9 @@ function PageParent(props: PageParentProps): JSX.Element {
           <Header2 />
         </Header1>
         <AppBody>
-          {false && <LeftColumn></LeftColumn>}
-          <RightColumn>
+          <MainContent>
             <FormEntity1 />
-          </RightColumn>
+          </MainContent>
         </AppBody>
       </PageContainer>
     </PageParent1>
